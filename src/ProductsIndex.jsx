@@ -4,9 +4,10 @@ export function ProductsIndex(props) {
       <h1>Hey what up</h1>
       {props.products.map((product) => (
         <div key={product.id}>
-          <img src={product.images[0]} />
+          <img src={product.images[0].url} />
           <h2>{product.name}</h2>
           <h2>{product.price}</h2>
+          <h3>{product.supplier.email}</h3>
         </div>
       ))}
     </div>
