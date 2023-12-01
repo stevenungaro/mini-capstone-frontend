@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { ProductsIndex } from "./ProductsIndex";
 import { SignUp } from "./SignUp";
 import { Login } from "./Login";
@@ -32,13 +33,15 @@ export function Content() {
   // useEffect(handleIndexCartedProducts, []);
 
   return (
-    <main>
-      <h1>Welcome to React!</h1>
-      <SignUp />
-      <Login />
+    <div className="container">
+      <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/games" element={<ProductsIndex products={products} />} />
+      </Routes>
+      <h1>Hello!</h1>
       <LogoutLink />
-      <ProductsIndex products={products} />
       {/* <CartedProductsIndex carted_products={carted_products} /> */}
-    </main>
+    </div>
   );
 }

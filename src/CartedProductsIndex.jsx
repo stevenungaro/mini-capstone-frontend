@@ -4,7 +4,7 @@
 //       <h1>Carted Products Index Placeholder</h1>
 //       {props.carted_products.map((carted_product) => (
 //         <div key={carted_product.id}>
-//           {/* <img src={carted_product.product} /> */}
+//           <img src={carted_product.product.images[0].url} />
 //           <h2>{carted_product.product.name}</h2>
 //           <h2>{carted_product.product.price}</h2>
 //         </div>
